@@ -32,7 +32,7 @@ jobs:
         pkg-config zlib1g-dev libgmp3-dev libmpc-dev libmpfr-dev libncurses5-dev libltdl-dev wget
     - name: Clone source code
       run: |
-        git clone --depth=1 https://github.com/xiaiohuan/padavan-4.4.git /opt/rt-n56u
+        git clone --depth=1 https://github.com/LoveCodeSea/xhpadavan-4.4.git /opt/rt-n56u
         cd /opt/rt-n56u
         make JCG-Q20
         mkdir -p /opt/images/
