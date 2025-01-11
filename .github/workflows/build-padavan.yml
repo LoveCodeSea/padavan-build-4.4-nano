@@ -33,12 +33,12 @@ jobs:
     - name: Clone source code
       run: |
         git clone --depth=1 https://github.com/xiaiohuan/padavan-4.4.git /opt/rt-n56u
-        cd /opt/rt-n56u/toolchain-mipsel
-        sh dl_toolchain.sh
+        cd /opt/rt-n56u
+        make JCG-Q20
         mkdir -p /opt/images/
     - name: Build Firmware
       env:
-        TNAME: JCQ-Q20
+        TNAME: JCG-Q20
       run: |
         cd /opt/rt-n56u/trunk
         if [ ! -f configs/templates/$TNAME.config ] ; then
